@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.form-row {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 8px;
+}
+
+.all-container {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 8px;
+}
+
+.grid-container0 {
+  display: grid;
+  grid-template-columns: 50px 50px 100px 100px 200px 200px 200px 200px 100px auto;
+  margin-bottom: 8px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 150px auto 150px 100px 70px auto;
+}
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 100px 75px 100px 50px 120px 50px 50px 75px 75px;
+  margin-bottom: 8px;
+}
+
+.grid-holder {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.grid-item {
+  background-color: #e8f0f3af;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 8px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-head {
+    background-color: white;
+}
+
+.additional-row {
+    border: 1px solid rgba(129, 129, 129, 0.6);
+    padding: 8px;
+    text-align: center;
+}
+
+.red {
+  color: red;
+  flex-direction: column;
+}
+
+.approval {
+  margin-top: 0.25rem;
+  color: goldenrod;
+  font-style: italic;
+  font-size: 0.75rem;
+  text-decoration: underline;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.7s;
+  animation: fadeIn 0.7s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+.confirmation-page {
+  background-color: #e8f0f3af;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.confirmation-bottom {
+  background-color: #aadcde;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:1rem;
+  padding-right: 4rem;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Pharmacist Table mockup</h1>
+
+<div class='popup form-row'>
+    <label for='title'>Search: </label>
+    <input id='title' name='title' type='text' value="555555"/>
+    <span class="popuptext" id="myPopup">URL added to clipboard...</span>
+  </div>
+
+<div class="all-container">
+
+    <div class="grid-container0">
+        <div class="grid-item grid-head">S.No.</div>
+        <div class="grid-item grid-head"><input type="checkbox" /></div>
+        <div class="grid-item grid-head">Order Type</div>
+        <div class="grid-item grid-head">Order Number</div>  
+        <div class="grid-item grid-head">Full Name</div>
+        <div class="grid-item grid-head">Submitted By</div>
+        <div class="grid-item grid-head">Submitted On</div>
+        <div class="grid-item grid-head">Confirmed On</div>  
+        <div class="grid-item grid-head">Status</div>
+        <div class="grid-item grid-head">Actions</div>
+
+        <div class="grid-item">+ 1</div>
+        <div class="grid-item"><input type="checkbox" /> </div>
+        <div class="grid-item">REFILL</div>
+        <div class="grid-item">S066566</div>  
+        <div class="grid-item"><img src="ss.png"  width="50" height="50"> Patient Patientson(55555)</div>
+        <div class="grid-item">Genghis Khan</div>
+        <div class="grid-item">July 13, 2022 2:24 pm</div>
+        <div class="grid-item">-</div>  
+        <div class="grid-item red">Pending
+          <div class="approval popup" onclick="myFunction()">Awaiting
+            <span class="popuptext" id="myPopup">URL added to clipboard...</span>
+          </div>
+        </div>
+        <div class="grid-item"><img src="actions.png" /></div>
+    </div>
+</div>
+
+<hr>
+
+<h1>Link Mockup</h1>
+<div class="confirmation-page">
+  <img src="logo.png">
+  <div class="conf-main">
+    Hello Patient Patientson,
+<br><br>
+Thanks for confirming details for order (S066566). Our Pharmacy is working to have your order filled and shipped as soon as possible. We will be in touch if we need any additional information. 
+<br>
+You should receive your tracking number shortly.
+<br><br>
+Click Here to review your order. Please inform us immediately of any changes.
+<br><br>
+As a friendly reminder, please place your refills at least 2 weeks before you run out of medication. 
+<br><br>
+Shipping information:
+<br>
+All tracking numbers are generated and emailed directly to you by Canada Post.
+<br>
+For all USA Orders, your order will be delivered locally by USPS so your please copy and paste your tracking number into www.usps.com for the most up to date status and estimated time of arrival.
+<br>
+For all international orders, your order will be delivered by your local courier.
+<br>
+Thank you for shopping at Canada Cloud Pharmacy
+<br>
+If you have any questions or concerns, please call us at 1-800-901-0041. We are here to help!<br><br>
+  </div>
+
+  <div class="confirmation-bottom">
+    <div class="conf-btm conf-left">
+      Toll-Free Phone: 1-800-901-0041<br>
+      <br>
+      Toll-Free Fax: 1-888-258-7962<br>
+      <br>
+      Email: orders@canadacloudpharmacy.com<br>
+      <br>
+      For Media and/or Advertising Inquiries Please Contact:<br>
+      <br>
+      orders@canadacloudpharmacy.com<br>
+
+
+    </div>
+    <div class="conf-btm conf-right">
+      Send prescriptions, order forms and documents to:<br>
+      <br>
+      4918 Victoria Drive,<br>
+      Vancouver, BC<br>
+      Canada<br>
+      V5P 3T6<br>
+      <br>
+      © 2022 Canada Cloud Pharmacy<br>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+  // When the user clicks on <div>, open the popup
+  function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+  }
+  </script>
+
+</body>
+</html>
+
+
