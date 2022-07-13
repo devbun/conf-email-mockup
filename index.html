@@ -176,9 +176,13 @@ body {
         <div class="grid-item">Genghis Khan</div>
         <div class="grid-item">July 13, 2022 2:24 pm</div>
         <div class="grid-item">-</div>  
-        <div class="grid-item red">Pending
-          <div class="approval popup" onclick="myFunction()">Awaiting
-            <span class="popuptext" id="myPopup">URL added to clipboard...</span>
+        <div class="grid-item red" ><span onclick="myFunction()"><u>Pending</u></span>
+          <div class="approval popup">
+            <select name="approval" id="approval">
+              <option value="saab">Awaiting</option>
+              <option value="opel">Approved</option>
+              <option value="audi">Rejected</option>
+            </select>
           </div>
         </div>
         <div class="grid-item"><img src="actions.png" /></div>
